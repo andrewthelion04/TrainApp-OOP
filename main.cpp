@@ -17,7 +17,7 @@ protected:
         mt19937 gen(rd()); // Generator de numere random
         uniform_int_distribution<> distr(0, 25); // Distributie uniforma de numere intregi intre 0 si 25
 
-        for (int i = 0; i < length; i++) 
+        for (int i = 0; i < length; i++)
         {
             key += 'A' + distr(gen); // Adaugam la cheie un caracter random intre 'A' si 'Z'
         }
@@ -274,7 +274,7 @@ public:
     {
         ifstream routesFile("routes.csv");
         if (!routesFile.is_open())
-        {   
+        {
             cerr << "Unable to open routes file!" << endl;
             return;
         }
@@ -643,7 +643,7 @@ int mainMenu() // Meniul principal
          << "1. Operator" << endl
          << "2. User" << endl
          << "3. Exit" << endl
-        
+
          << endl
          << "Choose an option: ";
     int choice;
@@ -733,10 +733,10 @@ void userMenu(User &user) // Meniul pentru utilizator
                 {
                     throw "Please login first!";
                 }
-                
+
                 cout << endl
                         << "-----Search Route-----" << endl;
-                
+
                 cout << "Departure: ";
                 getline(cin, departure);
 
